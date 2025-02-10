@@ -39,9 +39,14 @@ const Papers = () => {
         <h3 className="text-xl font-semibold mb-4">Published Papers</h3>
         <div className="space-y-4">
           {publishedPapers.map((paper, index) => (
-            <div key={index} className="text-gray-800 flex flex-col">
+            <div key={index} className="text-gray-800">
               <div>
-                <a href={paper.link} className="text-gray-800 underline hover:text-gray-600">
+                <a 
+                  href={paper.link} 
+                  className="text-gray-800 hover:text-gray-600"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {paper.title}
                 </a>
                 <span>, {paper.coAuthors}</span>
@@ -60,7 +65,12 @@ const Papers = () => {
         <div className="space-y-4">
           {workingPapers.map((paper, index) => (
             <div key={index} className="text-gray-800">
-              <a href={paper.link} className="text-gray-800 underline hover:text-gray-600">
+              <a 
+                href={paper.link} 
+                className="text-gray-800 hover:text-gray-600"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {paper.title}
               </a>
               {paper.coAuthors && <span>, {paper.coAuthors}</span>}

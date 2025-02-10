@@ -22,12 +22,13 @@ const BlogPosts = () => {
               href={post.link}
               target="_blank"
               rel="noopener noreferrer" 
+              className="text-gray-800 hover:text-gray-600"
             >
-              <h4 className="text-blue-600 hover:underline">
+              <h4>
                 {post.title}
               </h4>
             </a>
-            <p className="text-gray-600 mt-1">
+            <p className="text-gray-600 mt-2 text-sm">
               {post.description}
             </p>
           </div>
